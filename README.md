@@ -9,16 +9,24 @@ This code is mainly based on three Python modules: MySQLdb, Bio and pandas.
 
 The Medical Subject Heading (MeSH) terms are extracted from all the articles retrieved as "search results" from PubMed. 
 This function is performed by the file "MeSH_to_MySQL.py". 
-The MeSH terms are stored in a MySQL database of the form: 
+The MeSH terms are stored in a MySQL database with four columns: "Id", "PMID", "MeSH" and "Dates". 
 
 +----+---------+------------+------------+
+
 | Id | PMID    | MeSH       | Dates      |
+
 +----+---------+------------+------------+
+
 |  1 | 7701056 | Adult      | 1994-12-01 |
+
 |  2 | 7701056 | Calcitriol | 1994-12-01 |
+
 |  3 | 7701056 | Female     | 1994-12-01 |
+
 |  4 | 7701056 | Humans     | 1994-12-01 |
+
 |  5 | 7701056 | Male       | 1994-12-01 |
+
 +----+---------+------------+------------+
 
 By default, this file assesses the whole literature on "Psychology" found in PubMed from 2000 to 2010 (~25000 articles). 
